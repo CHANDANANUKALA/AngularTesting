@@ -1,0 +1,135 @@
+<!--
+
+<h1 class="text-center text-primary" >Welcome to angular</h1>
+<hr>
+<h4>Interpolation:</h4>
+<div class="text-center">
+        <h1 class="text-danger">{{nameOfCourse}} {{version}}</h1>
+        <h5>Details of course</h5>
+        <h6>{{courseDetails.duration}}</h6>
+        <img src="{{imgPath}}" alt="" width="100px">>
+        <input type="text" value="{{nameOfCourse}}">
+        <button class="btn btn-success" disabled={{status}}>Test button</button>
+
+</div>
+<h4>Property Binding</h4>
+<div class="text-center">
+    <img [src]=imgPath alt="" width="100px">
+    <input type="text" [value]=nameOfCourse>
+    <button class="btn btn-success" [disabled]=status>Test button</button>
+</div>
+<h4>Event binding:</h4>
+<div>
+    <input type="text" #ref >
+    <button class="btn btn-primary" (click)="sendData(ref.value)">send data</button>
+    <br><br>
+    <h1>{{printData}}</h1>
+</div>
+<h1 class="text-center">Structural Directives</h1>
+<div class="text-center">
+    <button (click)="changeStatus()" class="btn-primary">{{status1?"Hide":"Show"}}</button>
+    <h1 *ngIf="status1"class="text-danger">Welcome</h1>
+
+    <h2 *ngFor="let n of arr">{{n}}</h2>
+    <ul style="list-style:inside">
+        <li  *ngFor="let n of arr">{{n}}</li>
+    </ul>
+</div>-->
+
+<!--<div class="w-50 mx-auto text-center">
+    <h1 class="text-white mt-5 bg-primary">Employee List</h1>
+    <div class="form-floating m-4">
+        <input type="text" class="form-control" #ref1 id="inp1" placeholder="names...">
+        <label for="inp1">Enter Name</label>
+    </div>
+    <button class="btn btn-success mt-1 mx-auto mb-3" (click)="printData1(ref1.value);ref1.value=''">
+        <i class="fa fa-plus-square"></i>
+        Add Name
+    </button>
+    <h3 class="text-danger bg-warning mb-3">List of Names:</h3>
+    <h2 *ngIf="res.length==0">
+        <i class="fas fa-search"></i>
+        No Items Found!!!</h2>
+    <h4 *ngFor="let n of res;let ind=index" class="n">
+        {{n}}
+        <button class="btn btn-sm deleteBtn" (click)="deleteItem(ind)"> <i class="fa fa-minus-square"></i></button>
+
+    </h4>
+</div>
+<div class="w-50 mx-auto text-center">
+    <h1 class="text-white mt-5 bg-primary">Employee List</h1>
+    <div class="form-floating m-4">
+        <input type="text" class="form-control"  id="inp1" placeholder="names..." [(ngModel)]="item">
+        <label for="inp1">Enter Name</label>
+    </div>
+    <button class="btn btn-success mt-1 mx-auto mb-3" (click)="printData1()">
+        <i class="fa fa-plus-square"></i>
+        Add Name
+    </button>
+    <h3 class="text-danger bg-warning mb-3">List of Names:</h3>
+    <h2 *ngIf="res.length==0">
+        <i class="fas fa-search"></i>
+        No Items Found!!!</h2>
+    <h4 *ngFor="let n of res;let ind=index" class="n">
+        {{n}}
+        <button class="btn btn-sm deleteBtn" (click)="deleteItem(ind)"> <i class="fa fa-minus-square"></i></button>
+
+    </h4>
+</div>
+-->
+
+<!--<div class="text-center">
+        <h2 class="text-info">List of Registered Users</h2>
+        <h2 *ngIf="users.length==0">No Users Found!!</h2>
+        <div *ngIf="users.length!=0" >
+            <table class="table">
+                <tr>
+                    <th>Username</th>
+                    <th>DOB</th>
+                    <th>Email</th>
+                </tr>
+                <tbody>
+                    <tr *ngFor="let u of users">
+                        <td>{{u.Username}}</td>
+                        <td>{{u.DOB}}</td>
+                        <td>{{u.email}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="accordian" id="accordianEx">
+                <div class="accordian-item" *ngFor="let u of users;let ind=index" >
+                    <h5 class="accordian-header">
+                        <button class="accordian-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#acr'+ind" >
+                            {{u.Username}}
+                        </button>
+                    </h5>
+                </div>
+                <div [attr.id]="'acr'+ind"  class="accordian-collapse collapse" data-bs-parent="#accordianEx">
+                    <div class="accordian-body">
+                        <p>{{u.DOB}}</p>
+                        <p>{{u.email}}</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>-->
+    
+
+
+
+    <h1 class="text-center  mx-auto mt-5" style=" background-color: rgb(194, 226, 142);border-radius: 2px;">User Management System</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <!--nest user registration component-->
+            <app-user-registration></app-user-registration>
+        </div>
+        <div class="col-sm-6">
+            <!--nest user list component-->
+            <app-user-list></app-user-list>
+        </div>
+    </div>
+
+</div>
